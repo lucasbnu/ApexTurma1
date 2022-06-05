@@ -14,7 +14,6 @@ public class GeradorCPF {
         System.out.println(listaNumAleatorios);
         validadorDigitos validador = new validadorDigitos();
         listaNumAleatorios = validador.ValidarDigitos(listaNumAleatorios);
-        listaNumAleatorios = validador.ValidarDigitos(listaNumAleatorios);
          System.out.println(listaNumAleatorios);
     
     }    
