@@ -8,5 +8,4 @@ public class ClassePaiDTO {
     public ArrayList<campo> retornaCampos(){
         return null;
     }
-    
 }
