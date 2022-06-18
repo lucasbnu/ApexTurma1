@@ -41,8 +41,8 @@ public class clientesDTO extends ClassePaiDTO {
         return id_cliente;
     }
 
-    public void setId_cliente(campo<Integer> id_cliente) {
-        this.id_cliente = id_cliente;
+    public void setId_cliente(int id_cliente) {
+        this.id_cliente.valorCampo = id_cliente;
     }
 
 
@@ -50,8 +50,8 @@ public class clientesDTO extends ClassePaiDTO {
         return Nome_Cliente;
     }
 
-    public void setNome_Cliente(campo<String> Nome_Cliente) {
-        this.Nome_Cliente = Nome_Cliente;
+    public void setNome_Cliente(String Nome_Cliente) {
+        this.Nome_Cliente.valorCampo = Nome_Cliente;
     }
 
 
@@ -60,8 +60,8 @@ public class clientesDTO extends ClassePaiDTO {
     }
 
 
-    public void setCPF(campo<String> CPF) {
-        this.CPF = CPF;
+    public void setCPF(String CPF) {
+        this.CPF.valorCampo = CPF;
     }
 
 
@@ -70,17 +70,16 @@ public class clientesDTO extends ClassePaiDTO {
     }
 
 
-    public void setTelefone(campo<String> telefone) {
-        this.telefone = telefone;
+    public void setTelefone(String telefone) {
+        this.telefone.valorCampo = telefone;
     }
 
     public campo<String> getEmail() {
         return email;
     }
 
-
-    public void setEmail(campo<String> email) {
-        this.email = email;
+    public void setEmail(String email) {
+        this.email.valorCampo = email;
     }
     
 }
