@@ -1,30 +1,29 @@
 package DAO;
 
 import DTO.ClassePaiDTO;
+import java.sql.ResultSet;
 import java.util.ArrayList;
+import javax.swing.table.TableModel;
+import utils.CRUDUtil;
 import utils.StringUtil;
 import utils.campo;
 
 public class geralDAO {
-   
     private bancoDAO banco;
-   
     
     public geralDAO(){
-
         banco = new bancoDAO();
     }
+    
+
     
     public String atualizaRegistro(ClassePaiDTO objDTO){
         ArrayList<campo> listadeCampos = objDTO.retornaCampos();
         StringUtil trataSTR = new StringUtil();
         String comando = "UPDATE " + objDTO.NomedaTabela +" SET ";
-        //String campos = "";
         String valores = "";
         for (int i = 0; i < listadeCampos.size(); i++) {
-
             if (!listadeCampos.get(i).ChavePrimaria) {
-                
                 valores += listadeCampos.get(i).nomedoCampo;
                 if (listadeCampos.get(i).valorCampo.getClass() == String.class){
                      valores += " = "+ trataSTR.colocaAspasSimples(listadeCampos.get(i).valorCampo.toString());
@@ -35,18 +34,22 @@ public class geralDAO {
                     valores += ",";
                 }
             }
-
         }
         String comandoWhere = " WHERE ";
         for (int i = 0; i < listadeCampos.size(); i++) {
             if (listadeCampos.get(i).ChavePrimaria){
                comandoWhere += listadeCampos.get(i).nomedoCampo + " = " + listadeCampos.get(i).valorCampo.toString();
             }
-        }        
-
+        }      
         String comandoFinal = comando + valores +comandoWhere;
-
         return comandoFinal;
+    }
+    
+    
+    public TableModel retornaConsulta(ClassePaiDTO objDTO){
+        
+        String comando = "select * from "+objDTO.NomedaTabela;
+        return  CRUDUtil.resultSetToTableModel(banco.retornaDados(comando));
         
     }
     
@@ -69,7 +72,6 @@ public class geralDAO {
         String campos = "";
         String valores = "";
         for (int i = 0; i < listadeCampos.size(); i++) {
-
             if (!listadeCampos.get(i).ChavePrimaria) {
                 campos += listadeCampos.get(i).nomedoCampo;
                 if (listadeCampos.get(i).valorCampo.getClass() == String.class){
@@ -83,7 +85,6 @@ public class geralDAO {
                 }
             }
         }
-
         comando += " (" + campos + ")" + " values (" + valores + ")";
         banco.executaComando(comando);
         return comando;

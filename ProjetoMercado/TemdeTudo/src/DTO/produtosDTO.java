@@ -42,8 +42,8 @@ public class produtosDTO extends ClassePaiDTO{
         return id_produto;
     }
 
-    public void setId_produto(campo<Integer> id_produto) {
-        this.id_produto = id_produto;
+    public void setId_produto(int id_produto) {
+        this.id_produto.valorCampo = id_produto;
     }
 
     public campo<String> getDescricao_produto() {

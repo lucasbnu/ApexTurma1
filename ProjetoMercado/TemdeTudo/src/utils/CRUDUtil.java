@@ -1,19 +1,12 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package utils;
 import java.sql.ResultSet;
 import java.sql.ResultSetMetaData;
 import java.util.Vector;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableModel;
-/**
- *
- * @author lucas
- */
+
 public class CRUDUtil {
-public static TableModel resultSetToTableModel(ResultSet rs) {
+    public static TableModel resultSetToTableModel(ResultSet rs) {
         try {
             ResultSetMetaData metaData = rs.getMetaData();
             int numberOfColumns = metaData.getColumnCount();
@@ -43,5 +36,5 @@ public static TableModel resultSetToTableModel(ResultSet rs) {
 
             return null;
         }
-    }  
+    }
 }
