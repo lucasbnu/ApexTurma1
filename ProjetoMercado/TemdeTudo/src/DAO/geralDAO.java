@@ -6,7 +6,14 @@ import utils.StringUtil;
 import utils.campo;
 
 public class geralDAO {
+   
+    private bancoDAO banco;
+   
     
+    public geralDAO(){
+
+        banco = new bancoDAO();
+    }
     
     public String atualizaRegistro(ClassePaiDTO objDTO){
         ArrayList<campo> listadeCampos = objDTO.retornaCampos();
@@ -52,6 +59,7 @@ public class geralDAO {
                comandoWhere = listadeCampos.get(i).nomedoCampo + " = " + listadeCampos.get(i).valorCampo.toString();
             }
         }
+        banco.executaComando(comando +comandoWhere);
         return comando + comandoWhere;
     }
     public String insereRegistro(ClassePaiDTO objDTO) {
@@ -74,11 +82,10 @@ public class geralDAO {
                     valores += ",";
                 }
             }
-
         }
 
         comando += " (" + campos + ")" + " values (" + valores + ")";
-
+        banco.executaComando(comando);
         return comando;
     }
 
