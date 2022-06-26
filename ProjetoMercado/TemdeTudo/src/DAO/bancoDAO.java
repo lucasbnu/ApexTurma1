@@ -31,7 +31,7 @@ public class bancoDAO {
             ps = conn.prepareStatement(comando);
             Dados = ps.executeQuery();
         } catch (SQLException ex) {
-            Logger.getLogger(bancoDAO.class.getName()).log(Level.SEVERE, null, ex);
+            JOptionPane.showMessageDialog(null, "bancoDAO.bancoDAO " + ex.getMessage());
         }
         return Dados;
     }

@@ -38,32 +38,32 @@ public class vendasDTO extends ClassePaiDTO {
         return id_venda;
     }
 
-    public void setId_venda(campo<Integer> id_venda) {
-        this.id_venda = id_venda;
+    public void setId_venda(int id_venda) {
+        this.id_venda.valorCampo = id_venda;
     }
 
     public campo<Integer> getFk_produto() {
         return fk_produto;
     }
 
-    public void setFk_produto(campo<Integer> fk_produto) {
-        this.fk_produto = fk_produto;
+    public void setFk_produto(int fk_produto) {
+        this.fk_produto.valorCampo = fk_produto;
     }
 
     public campo<Integer> getFk_cliente() {
         return fk_cliente;
     }
 
-    public void setFk_cliente(campo<Integer> fk_cliente) {
-        this.fk_cliente = fk_cliente;
+    public void setFk_cliente(int fk_cliente) {
+        this.fk_cliente.valorCampo = fk_cliente;
     }
 
     public campo<Integer> getQuantidade() {
         return quantidade;
     }
 
-    public void setQuantidade(campo<Integer> quantidade) {
-        this.quantidade = quantidade;
+    public void setQuantidade(int quantidade) {
+        this.quantidade.valorCampo = quantidade;
     }
     
   

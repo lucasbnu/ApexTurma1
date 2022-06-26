@@ -42,13 +42,18 @@ public class geralDAO {
             }
         }      
         String comandoFinal = comando + valores +comandoWhere;
+        banco.executaComando(comandoFinal);
         return comandoFinal;
     }
     
     
-    public TableModel retornaConsulta(ClassePaiDTO objDTO){
-        
-        String comando = "select * from "+objDTO.NomedaTabela;
+    public TableModel retornaConsulta(ClassePaiDTO objDTO, String filtro){
+       String comando = "";
+        if (filtro == ""){
+            comando = "select * from "+objDTO.NomedaTabela;
+        }else{
+            comando = "select * from "+objDTO.NomedaTabela + " where "+filtro;  
+        }
         return  CRUDUtil.resultSetToTableModel(banco.retornaDados(comando));
         
     }

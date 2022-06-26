@@ -50,24 +50,24 @@ public class produtosDTO extends ClassePaiDTO{
         return descricao_produto;
     }
 
-    public void setDescricao_produto(campo<String> descricao_produto) {
-        this.descricao_produto = descricao_produto;
+    public void setDescricao_produto(String descricao_produto) {
+        this.descricao_produto.valorCampo = descricao_produto;
     }
 
     public campo<Integer> getQuantidade_estoque() {
         return quantidade_estoque;
     }
 
-    public void setQuantidade_estoque(campo<Integer> quantidade_estoque) {
-        this.quantidade_estoque = quantidade_estoque;
+    public void setQuantidade_estoque(int quantidade_estoque) {
+        this.quantidade_estoque.valorCampo = quantidade_estoque;
     }
 
     public campo<Double> getValor() {
         return valor;
     }
 
-    public void setValor(campo<Double> valor) {
-        this.valor = valor;
+    public void setValor(Double valor) {
+        this.valor.valorCampo = valor;
     }
     
 }

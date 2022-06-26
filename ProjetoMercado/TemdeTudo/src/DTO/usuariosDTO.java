@@ -40,32 +40,32 @@ public class usuariosDTO extends ClassePaiDTO {
         return id_usuario;
     }
 
-    public void setId_usuario(campo<Integer> id_usuario) {
-        this.id_usuario = id_usuario;
+    public void setId_usuario(int id_usuario) {
+        this.id_usuario.valorCampo = id_usuario;
     }
 
     public campo<String> getNome_usuario() {
         return nome_usuario;
     }
 
-    public void setNome_usuario(campo<String> nome_usuario) {
-        this.nome_usuario = nome_usuario;
+    public void setNome_usuario(String nome_usuario) {
+        this.nome_usuario.valorCampo = nome_usuario;
     }
 
     public campo<String> getSenha() {
         return senha;
     }
 
-    public void setSenha(campo<String> senha) {
-        this.senha = senha;
+    public void setSenha(String senha) {
+        this.senha.valorCampo = senha;
     }
 
     public campo<Integer> getNivel_acesso() {
         return nivel_acesso;
     }
 
-    public void setNivel_acesso(campo<Integer> nivel_acesso) {
-        this.nivel_acesso = nivel_acesso;
+    public void setNivel_acesso(int nivel_acesso) {
+        this.nivel_acesso.valorCampo = nivel_acesso;
     }
 
 }
