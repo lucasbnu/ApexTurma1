@@ -7,6 +7,13 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h1>Lucas</h1>
+<form action="receber.jsp">
+<label>Nome</label>
+<input type="teste" name="nome">
+
+<label>Idade</label>
+<input type="number" name="idade">
+<input type="submit">
+</form>
 </body>
 </html>

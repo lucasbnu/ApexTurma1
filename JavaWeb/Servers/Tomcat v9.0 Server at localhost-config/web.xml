@@ -118,6 +118,10 @@
         </init-param>
         <load-on-startup>1</load-on-startup>
     </servlet>
+    
+    
+    
+
 
 
   <!-- The JSP page compiler and execution servlet, which is the mechanism  -->
@@ -4729,5 +4733,13 @@
         <welcome-file>index.htm</welcome-file>
         <welcome-file>index.jsp</welcome-file>
     </welcome-file-list>
-
+    <servlet>
+        <servlet-name>mensagem</servlet-name>
+        <servlet-class>pacote.mensagem</servlet-class>
+    </servlet>    
+    
+    <servlet-mapping>
+        <servlet-name>mensagem</servlet-name>
+        <url-pattern>/</url-pattern>
+    </servlet-mapping>
 </web-app>

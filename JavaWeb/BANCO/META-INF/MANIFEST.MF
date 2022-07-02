@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: BANCO
+Bundle-SymbolicName: BANCO
+Bundle-Version: 1.0.0
+Automatic-Module-Name: BANCO
+Bundle-RequiredExecutionEnvironment: JavaSE-18
