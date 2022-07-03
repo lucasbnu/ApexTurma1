@@ -9,5 +9,6 @@ public interface ClientesRepositorio extends Repository<ClientesModelo, Integer>
 	List<ClientesModelo> findAll();
 	ClientesModelo findById_cliente( Integer id_cliente);
 	void delete(ClientesModelo cliente);
+	
 
 }

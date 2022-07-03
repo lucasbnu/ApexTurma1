@@ -3,9 +3,7 @@ package modelo;
 public class RespostaModelo {
 private String Mensagem;
 
-public RespostaModelo(){
-
-}
+public RespostaModelo(){}
 
 public RespostaModelo(String Mensagem) {
 	this.Mensagem = Mensagem;
@@ -13,6 +11,7 @@ public RespostaModelo(String Mensagem) {
 
 public String getMensagem() {
 	return Mensagem;
+
 }
 
 public void setMensagem(String mensagem) {
